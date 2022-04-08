@@ -16,8 +16,7 @@ const multipleFive = 5;
 //Ciclo For che stampa in pagina l'elemento box tante quante volte è il numero associato alla variabile "numberMax"
 
 for (let i=1; i <= numberMax; i++){
-  const boxEl = document.createElement("div");
-  boxEl.className = "box";
+  // Milestone 1
 
   if(!(i % multipleFive) && !(i % multipleThree)) {
     console.log("FizzBuzz")
@@ -28,5 +27,27 @@ for (let i=1; i <= numberMax; i++){
   }else {
     console.log(i)
   }
+  // /Milestone 1
+
+  // Milestone 2
+  // Inserisco nella variabile l'elemento Div
+
+  const boxEl = document.createElement("div");
+  boxEl.className = "box";
+
+  if(!(i % multipleFive) && !(i % multipleThree)) {
+    boxEl.innerHTML= "FizzBuzz";
+  }else if(!(i % multipleThree)) {
+    boxEl.innerHTML= "Fizz";
+  } else if(!(i % multipleFive)) {
+    boxEl.innerHTML= "Buzz";
+  } else{
+  boxEl.append(i)
+  }
+  // Stampo l'elemento nel container
+  container.append(boxEl);
+  // /Milestone 2
+
+
 
 }
