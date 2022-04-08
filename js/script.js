@@ -36,11 +36,14 @@ for (let i=1; i <= numberMax; i++){
   boxEl.className = "box";
 
   if(!(i % multipleFive) && !(i % multipleThree)) {
+    boxEl.classList.add("box-red");
     boxEl.innerHTML= "FizzBuzz";
   }else if(!(i % multipleThree)) {
+    boxEl.classList.add("box-green");
     boxEl.innerHTML= "Fizz";
   } else if(!(i % multipleFive)) {
-    boxEl.innerHTML= "Buzz";
+  boxEl.classList.add("box-yellow");
+  boxEl.innerHTML= "Buzz";
   } else{
   boxEl.append(i)
   }
