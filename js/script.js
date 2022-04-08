@@ -18,23 +18,15 @@ const multipleFive = 5;
 for (let i=1; i <= numberMax; i++){
   const boxEl = document.createElement("div");
   boxEl.className = "box";
-  boxEl.append(i);
 
-// Controllo se il numero è divisibile per 3 oppure per 5
-  if(!(i % multipleThree)) {
-    boxEl.classList.add("box-green");
-    boxEl.innerHTML= "Fizz";
-  } else if(!(i % multipleFive)) {
-    boxEl.classList.add("box-yellow");
-    boxEl.innerHTML= "Buzz";
-  } 
-  // Controllo se il numero è divisibile sia per 3 che per 5
   if(!(i % multipleFive) && !(i % multipleThree)) {
-    boxEl.classList.add("box-red");
-    boxEl.innerHTML= "FizzBuzz";
-  } 
-
-  // Stampo l'elemento nel container
-  container.append(boxEl);
+    console.log("FizzBuzz")
+  }else if(!(i % multipleThree)) {
+    console.log("Fizz")
+  }else if(!(i % multipleFive)) {
+    console.log("Buzz")
+  }else {
+    console.log(i)
+  }
 
 }
